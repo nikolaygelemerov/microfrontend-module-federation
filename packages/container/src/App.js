@@ -5,7 +5,7 @@ export default () => {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    console.log('counter: ', counter);
+    console.log('acounter: ', counter);
   }, []);
 
   return (
