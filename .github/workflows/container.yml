@@ -1,5 +1,8 @@
 name: deploy-container
 
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
+
 on:
   push:
     branches:
@@ -16,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: peter-evans/create-pull-request@v3
+      - uses: actions/checkout@v2
       - run: npm install
       - run: npm run build
 
