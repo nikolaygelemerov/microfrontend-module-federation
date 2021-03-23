@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< Updated upstream
-=======
 import { BrowserRouter } from 'react-router-dom';
 import {
   StylesProvider,
   createGenerateClassName
 } from '@material-ui/core/styles';
 
->>>>>>> Stashed changes
 import MarketingApp from './components/MarketingApp';
+import Header from './components/Header';
 
 const generateClassName = createGenerateClassName({
   productionPrefix: 'co'
@@ -22,13 +20,6 @@ export default () => {
   }, []);
 
   return (
-<<<<<<< Updated upstream
-    <div>
-      <h1>Hi There!</h1>
-      <hr />
-      <MarketingApp />
-    </div>
-=======
     <BrowserRouter>
       <StylesProvider generateClassName={generateClassName}>
         <div>
@@ -37,6 +28,5 @@ export default () => {
         </div>
       </StylesProvider>
     </BrowserRouter>
->>>>>>> Stashed changes
   );
 };
