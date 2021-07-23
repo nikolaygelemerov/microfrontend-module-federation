@@ -6,7 +6,7 @@ const packageJSON = require('../package.json');
 const devConfig = {
   mode: 'development',
   devServer: {
-    port: 8080,
+    port: 9000,
     historyApiFallback: {
       index: 'index.html'
     },
@@ -16,7 +16,7 @@ const devConfig = {
     new ModuleFederationPlugin({
       name: 'container',
       remotes: {
-        marketing: 'marketing@http://localhost:8081/remoteEntry.js'
+        marketing: 'marketing@http://localhost:9001/remoteEntry.js'
       },
       shared: packageJSON.dependencies // share libraries between container and module (marketing)
     })
